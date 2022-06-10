@@ -1,3 +1,4 @@
+// Business Logic
 function countBy(num) {
   if(Number(num) && num>=0) {
     let countArray = [];
@@ -16,3 +17,15 @@ function countBy(num) {
     return -1;
   }
 }
+
+// UI Logic
+$(document).ready(function() {
+  $("form#formOne").submit(function(event){
+    event.preventDefault();
+    const numInput = parseInt($("input#numInput").val());
+    const nameInput = $("input#name").val();
+    const numCount = countBy(numInput);
+    $("#result").html(numCount)
+    $("#neighborName").html(nameInput)
+  });
+});
