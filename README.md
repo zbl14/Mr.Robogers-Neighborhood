@@ -22,9 +22,11 @@
 
 ## Known Bugs
 
-* None
+* The clear result button should stay hidden when submit a negative number
+* Should be a prompt states "Please enter a positive number" when only submit with a name   
 
 ## TDD Specs
+
 ```sh
 Describe: countBy()
 ```

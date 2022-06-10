@@ -1,13 +1,3 @@
-// // Utility Logic
-// function noInputtedWord() {
-//   for (let i=0; i < arguments.length; i++) {
-//     if (arguments[i].trim().length === 0) {
-//       return true;
-//     }
-//   }
-//   return false;
-// }
-
 // Business Logic
 function countBy(num) {
   if(Number(num) && num>0) {
@@ -30,9 +20,11 @@ function countBy(num) {
 
 // UI Logic
 function msgWithName(num, name) {
-  if (name.trim().length === 0 || Number(name)) {
-    return "Please enter you name.";
-  }
+  if ((name.trim().length === 0 || Number(name)) && num > 0) {
+    return "Please enter your name.";
+  } else if (num <= 0) {
+    return "Please enter a positive number.";
+  } 
   let htmlStr = "<ul>";
   let msgArray = countBy(num).slice();
   msgArray.forEach(function(element) {
@@ -45,14 +37,12 @@ function msgWithName(num, name) {
   return htmlStr + "</ul>"
 }
 
-
 $(document).ready(function() {
   $("form#formOne").submit(function(event){
     event.preventDefault();
     const numInput = parseInt($("input#numInput").val());
     const nameInput = $("input#name").val();
     $("#msgWithName").html(msgWithName(numInput,nameInput)).show();
-    // $("#neighborName").html(nameInput).show();
     $("#clearResult").show();
   });
   $("#clearResult").click(function() {
