@@ -26,3 +26,9 @@ Code:
 const num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 countBy(num);
 Expected Output: [0, "Beep!", 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", 'Boop!', "Won't you be my neighbor?", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", 'Boop!', 'Boop!', 'Boop!', "Won't you be my neighbor?"]
+
+Test: "It should return a string that selceted numbers are replaced according to the rules"
+Code: 
+const num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+countBy(num);
+Expected Output: "0 Beep! Boop! Won't you be my neighbor? 4 5 6 7 8 9 Beep! Beep! Boop! Won't you be my neighbor? Beep! Beep! Beep! Beep! Beep! Beep! Boop! Boop! Boop! Won't you be my neighbor?"

@@ -1,6 +1,6 @@
 // Business Logic
 function countBy(num) {
-  if(Number(num) && num>=0) {
+  if(Number(num) && num>0) {
     let countArray = [];
     for (let i = 0; i<=num; i++) {
       countArray.push(i);
@@ -12,7 +12,7 @@ function countBy(num) {
         countArray[i]=("Beep!");
       }
     }
-    return countArray;
+    return countArray.join(" ");
   } else {
     return -1;
   }
@@ -24,14 +24,16 @@ $(document).ready(function() {
     event.preventDefault();
     const numInput = parseInt($("input#numInput").val());
     const nameInput = $("input#name").val();
-    const numCount = countBy(numInput);
+    let numCount = countBy(numInput);
     $("#result").html(numCount).show();
     $("#neighborName").html(nameInput).show();
-    // $("#clickable").click(function() {
-      $("#clearResult").show();
-    // });
+    $("#clearResult").show();
+    // $("#result")
+
+
   });
   $("#clearResult").click(function() {
     $("#clearResult, #neighborName, #result").hide();
   });
+
 });
