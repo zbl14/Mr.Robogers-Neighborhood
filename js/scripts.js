@@ -1,12 +1,12 @@
-// Utility Logic
-function noInputtedWord() {
-  for (let i=0; i < arguments.length; i++) {
-    if (arguments[i].trim().length === 0) {
-      return true;
-    }
-  }
-  return false;
-}
+// // Utility Logic
+// function noInputtedWord() {
+//   for (let i=0; i < arguments.length; i++) {
+//     if (arguments[i].trim().length === 0) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
 // Business Logic
 function countBy(num) {
@@ -30,9 +30,9 @@ function countBy(num) {
 
 // UI Logic
 function msgWithName(num, name) {
-  // if (noInputtedWord(num)) {
-  //   return "";
-  // }
+  if (name.trim().length === 0 || Number(name)) {
+    return "Please enter you name.";
+  }
   let htmlStr = "<ul>";
   let msgArray = countBy(num).slice();
   msgArray.forEach(function(element) {
@@ -44,6 +44,7 @@ function msgWithName(num, name) {
   });
   return htmlStr + "</ul>"
 }
+
 
 $(document).ready(function() {
   $("form#formOne").submit(function(event){
