@@ -18,7 +18,6 @@
     ```
 2. Open index.html file
 3. Enter a number and a name, then click "Submit" button
-4. Explore more info about the suggested language with attached link
 
 ## Known Bugs
 
