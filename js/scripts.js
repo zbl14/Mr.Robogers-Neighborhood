@@ -7,6 +7,8 @@ function countBy(num) {
         countArray[i]=("Won't you be my neighbor?");
       } else if (countArray[i].toString().includes("2")) {
         countArray[i]=("Boop!");
+      } else if (countArray[i].toString().includes("1")) {
+        countArray[i]=("Beep!");
       }
     }
     return countArray;
