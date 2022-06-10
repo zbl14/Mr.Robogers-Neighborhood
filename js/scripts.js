@@ -5,6 +5,8 @@ function countBy(num) {
       countArray.push(i);
       if (countArray[i].toString().includes("3")) {
         countArray[i]=("Won't you be my neighbor?");
+      } else if (countArray[i].toString().includes("2")) {
+        countArray[i]=("Boop!");
       }
     }
     return countArray;
