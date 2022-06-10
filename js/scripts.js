@@ -29,7 +29,7 @@ function countBy(num) {
 }
 
 // UI Logic
-function msgWithName(num) {
+function msgWithName(num, name) {
   // if (noInputtedWord(num)) {
   //   return "";
   // }
@@ -37,7 +37,7 @@ function msgWithName(num) {
   let msgArray = countBy(num).slice();
   msgArray.forEach(function(element) {
     if (element === "Won't you be my neighbor?") {
-      htmlStr = htmlStr.concat("<li>" + "Won't you be my neighbor, XX?" + "</li>");
+      htmlStr = htmlStr.concat("<li>" + "Won't you be my neighbor, " + name + "?" + "</li>");
     } else {
       htmlStr = htmlStr.concat("<li>" + element + "</li>");
     }
@@ -50,7 +50,7 @@ $(document).ready(function() {
     event.preventDefault();
     const numInput = parseInt($("input#numInput").val());
     const nameInput = $("input#name").val();
-    $("#msgWithName").html(msgWithName(numInput)).show();
+    $("#msgWithName").html(msgWithName(numInput,nameInput)).show();
     // $("#neighborName").html(nameInput).show();
     $("#clearResult").show();
   });
