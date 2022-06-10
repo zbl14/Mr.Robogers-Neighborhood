@@ -33,16 +33,16 @@ function msgWithName(num) {
   // if (noInputtedWord(num)) {
   //   return "";
   // }
-  let htmlStr = "<p>";
-  let msgArray = countBy(num).split(" ");
+  let htmlStr = "<ul>";
+  let msgArray = countBy(num).slice();
   msgArray.forEach(function(element) {
     if (element === "Won't you be my neighbor?") {
-      htmlStr = htmlStr.concat("Won't you be my neighbor, XX?");
+      htmlStr = htmlStr.concat("<li>" + "Won't you be my neighbor, XX?" + "</li>");
     } else {
-      htmlStr = htmlStr.concat(element);
+      htmlStr = htmlStr.concat("<li>" + element + "</li>");
     }
   });
-  return htmlStr + "</p>"
+  return htmlStr + "</ul>"
 }
 
 $(document).ready(function() {
@@ -50,8 +50,7 @@ $(document).ready(function() {
     event.preventDefault();
     const numInput = parseInt($("input#numInput").val());
     const nameInput = $("input#name").val();
-    // let numCount = countBy(numInput);
-    $("#msgWithName").html(countBy(numInput)).show();
+    $("#msgWithName").html(msgWithName(numInput)).show();
     // $("#neighborName").html(nameInput).show();
     $("#clearResult").show();
   });
