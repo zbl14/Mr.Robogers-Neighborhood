@@ -1,3 +1,30 @@
+# Mr. Roboger's Neighborhood
+
+#### By Zhibin Liang
+
+#### A webpage that asks a user to input a number and his name, providing responses from Mr. Roboger   
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+
+## Applicaiton setup instruction
+
+1. Clone the repo
+    ```sh
+    git clone (https://github.com/zbl14/Mr.Robogers-Neighborhood.git)
+    ```
+2. Open index.html file
+3. Enter a number and a name, then click "Submit" button
+4. Explore more info about the suggested language with attached link
+
+## Known Bugs
+
+* None
+
+## TDD Specs
 ```sh
 Describe: countBy()
 ```
@@ -31,3 +58,7 @@ Test: "It should return false when the input is either less than 0 or not a numb
 Code: countBy("abc");
 Expected Output: false
 
+## License
+MIT
+
+Copyright &copy; 2022 Zhibin Liang
