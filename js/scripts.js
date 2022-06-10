@@ -14,7 +14,7 @@ function countBy(num) {
     }
     return countArray.join(" ");
   } else {
-    return -1;
+    return false;
   }
 }
 
