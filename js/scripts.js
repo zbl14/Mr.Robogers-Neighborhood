@@ -25,7 +25,13 @@ $(document).ready(function() {
     const numInput = parseInt($("input#numInput").val());
     const nameInput = $("input#name").val();
     const numCount = countBy(numInput);
-    $("#result").html(numCount)
-    $("#neighborName").html(nameInput)
+    $("#result").html(numCount);
+    $("#neighborName").html(nameInput);
+    $("#clickable").click(function() {
+      $("#clearResult").show();
+    });
+    $("#clearResult").click(function() {
+      $("#neighborName, #result").hide();
+    });
   });
 });
